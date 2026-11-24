@@ -1,0 +1,30 @@
+{
+  "name": "localsend-desktop",
+  "productName": "LocalSend Clase",
+  "version": "1.0.0",
+  "description": "Transferencia de archivos P2P en red local (Electron + React)",
+  "main": "./out/main/index.js",
+  "author": "Grupo LocalSend",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "test": "node test/core.test.mjs",
+    "dist:win": "electron-vite build && electron-builder --win --x64",
+    "dist:linux": "electron-vite build && electron-builder --linux AppImage"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0",
+    "electron-vite": "^4.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "vite": "^7.0.0"
+  }
+}

@@ -1,0 +1,35 @@
+appId: com.clase.localsend
+productName: LocalSend Clase
+directories:
+  buildResources: build
+  output: dist
+files:
+  - out/**
+  - package.json
+  - '!**/node_modules/*/{test,__tests__,tests,example,examples}/**'
+asarUnpack: []
+npmRebuild: false
+
+# Protocolo para los botones de la notificación de Windows
+protocols:
+  - name: LocalSend Clase
+    schemes:
+      - localsend-clase
+
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: LocalSend_Desktop_Setup.${ext}
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  artifactName: LocalSend_Desktop_Setup.${ext}
+
+linux:
+  target: AppImage
+  category: Network
+  artifactName: LocalSend_Desktop_Setup.${ext}
